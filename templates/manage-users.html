@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <a href="/">Volver</a>
+    <h2>Gestión de Usuarios</h2>
+    <form method="post">
+      <input name="new_user" placeholder="Usuario nuevo" required>
+      <input name="new_pass" placeholder="Contraseña" required>
+      <label><input type="checkbox" name="is_admin"> Admin?</label>
+      <button name="add">Agregar</button>
+    </form>
+    <form method="post">
+      <select name="del_user">
+        {% for u,a in users %}
+          <option value="{{ u }}">{{ u }} ({{ 'Admin' if a else 'User' }})</option>
+        {% endfor %}
+      </select>
+      <button name="del">Borrar</button>
+    </form>
+    <ul>
+      {% for u,a in users %}
+        <li>{{ u }} – {{ 'Admin' if a else 'User' }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
