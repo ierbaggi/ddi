@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <a href="/">Volver</a>
+    <h2>Resultados para {{ company }}</h2>
+    <p>{{ timestamp }}</p>
+    {% if findings %}
+      <ul>
+        {% for f in findings %}
+          <li>{{ f[0] }} → {{ f[1] }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No se encontró nada</p>
+    {% endif %}
+    <a href="/download/{{ company }}/{{ timestamp }}">Descargar PDF</a>
+  </body>
+</html>
