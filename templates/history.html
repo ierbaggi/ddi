@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <a href="/">Volver</a>
+    <h2>Historial</h2>
+    <ul>
+      {% for u,c,f,k,t in records %}
+        <li>{{ u }} – {{ c }} – {{ f }} – {{ k }} – {{ t }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
