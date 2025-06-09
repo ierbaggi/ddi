@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <a href="/logout">Cerrar sesión</a> |
+    <a href="/change-password">Cambiar contraseña</a>
+    <h1>Subir archivos</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="text" name="company_name" placeholder="Empresa" required><br>
+      <input type="file" name="files" multiple required><br>
+      <button>Analizar</button>
+    </form>
+    <a href="/history">Historial</a> | <a href="/admin/users">Usuarios</a>
+  </body>
+</html>
