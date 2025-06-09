@@ -174,4 +174,6 @@ def history():
     return render_template("history.html", records=rec)
 
 if __name__=="__main__":
-    app.run()
+    # En producción Railway nos da el puerto en env.PORT
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
